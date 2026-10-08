@@ -647,6 +647,17 @@ section { padding: 80px 0; }
 
 .tl-body .desc { color: var(--muted); font-size: .94rem; }
 
+.tl-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.tl-tag {
+  font-size: .78rem;
+  color: var(--text);
+  background: var(--grad-soft);
+  border: 1px solid rgba(139,92,246,.28);
+  border-radius: 999px;
+  padding: 4px 11px;
+  letter-spacing: .3px;
+}
+
 /* ---------- About ---------- */
 .about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
 
