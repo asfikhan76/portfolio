@@ -843,17 +843,30 @@ footer .foot-links a:hover { color: #fff; }
 @media (max-width: 700px) {
   .nav-toggle { display: block; }
   .nav-links {
-    position: absolute;
+    position: fixed;
     top: 64px;
     left: 0; right: 0;
+    height: calc(100vh - 64px);
     flex-direction: column;
-    background: rgba(7,11,22,.97);
-    border-bottom: 1px solid var(--border2);
-    padding: 14px;
-    gap: 4px;
-    display: none;
+    align-items: stretch;
+    justify-content: flex-start;
+    background: rgba(7, 11, 22, 0.985);
+    backdrop-filter: blur(16px);
+    padding: 9vh 24px 24px;
+    gap: 1.4rem;
+    opacity: 0;
+    transform: translate3d(180px, 0, 0);
+    pointer-events: none;
+    transition: opacity .35s ease, transform .35s ease;
   }
-  .nav-links.open { display: flex; }
-  .nav-links a { width: 100%; text-align: center; }
+  .nav-links.open { opacity: 1; pointer-events: auto; transform: translateX(0); }
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    font-size: 1.15rem;
+    letter-spacing: 2px;
+    padding: 14px 0;
+  }
   .nav-links a.active::after { display: none; }
+  .nav-links a.active { color: #fff; background: var(--grad-soft); }
 }
