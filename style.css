@@ -52,6 +52,8 @@ body::before {
     radial-gradient(600px 500px at 50% 110%, rgba(79,140,255,.08), transparent 60%);
 }
 
+html, body { overflow-x: clip; }
+
 /* ---------- Navbar ---------- */
 header {
   position: sticky;
